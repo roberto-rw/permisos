@@ -15,5 +15,5 @@ public class Permiso {
     @Column(name = "cedula_medico")
     private String cedulaMedico;
     @Column(name = "id_paciente")
-    private String idPaciente;
+    private Long idPaciente;
 }
