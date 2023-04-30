@@ -19,14 +19,10 @@ public class PermisosService extends permisosServiceImplBase{
 //    public Permiso createPermiso(){
 //
 //    }
-
     
-    
-//    public boolean getPermiso(String cedulaMedico, Long idPaciente){
-//        List<Permiso> permisos = permisosRepository.findByCedulaMedicoAndIdPaciente(cedulaMedico, idPaciente);
-//        if(permisos.isEmpty()) return false;
-//        return true;
-//    }
+    public Permiso guardarPermiso(Permiso permiso){
+        return permisosRepository.save(permiso);
+    }
 
     @Override
     public void getPermiso(PermisoRequest request, StreamObserver<PermisoResponse> responseObserver) {
@@ -40,6 +36,8 @@ public class PermisosService extends permisosServiceImplBase{
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
     }
+    
+    
 
 
 }
