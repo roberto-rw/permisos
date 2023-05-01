@@ -16,7 +16,7 @@ public  final class PermisoRequest extends
   }
   private PermisoRequest() {
     cedulaMedico_ = "";
-    idPaciente_ = 0L;
+    idPaciente_ = "";
   }
 
   @java.lang.Override
@@ -50,9 +50,10 @@ public  final class PermisoRequest extends
             cedulaMedico_ = s;
             break;
           }
-          case 16: {
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            idPaciente_ = input.readInt64();
+            idPaciente_ = s;
             break;
           }
         }
@@ -113,12 +114,37 @@ public  final class PermisoRequest extends
   }
 
   public static final int ID_PACIENTE_FIELD_NUMBER = 2;
-  private long idPaciente_;
+  private volatile java.lang.Object idPaciente_;
   /**
-   * <code>optional int64 id_paciente = 2;</code>
+   * <code>optional string id_paciente = 2;</code>
    */
-  public long getIdPaciente() {
-    return idPaciente_;
+  public java.lang.String getIdPaciente() {
+    java.lang.Object ref = idPaciente_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      idPaciente_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string id_paciente = 2;</code>
+   */
+  public com.google.protobuf.ByteString
+      getIdPacienteBytes() {
+    java.lang.Object ref = idPaciente_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      idPaciente_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -136,8 +162,8 @@ public  final class PermisoRequest extends
     if (!getCedulaMedicoBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, cedulaMedico_);
     }
-    if (idPaciente_ != 0L) {
-      output.writeInt64(2, idPaciente_);
+    if (!getIdPacienteBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, idPaciente_);
     }
   }
 
@@ -149,9 +175,8 @@ public  final class PermisoRequest extends
     if (!getCedulaMedicoBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, cedulaMedico_);
     }
-    if (idPaciente_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(2, idPaciente_);
+    if (!getIdPacienteBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, idPaciente_);
     }
     memoizedSize = size;
     return size;
@@ -171,8 +196,8 @@ public  final class PermisoRequest extends
     boolean result = true;
     result = result && getCedulaMedico()
         .equals(other.getCedulaMedico());
-    result = result && (getIdPaciente()
-        == other.getIdPaciente());
+    result = result && getIdPaciente()
+        .equals(other.getIdPaciente());
     return result;
   }
 
@@ -186,8 +211,7 @@ public  final class PermisoRequest extends
     hash = (37 * hash) + CEDULA_MEDICO_FIELD_NUMBER;
     hash = (53 * hash) + getCedulaMedico().hashCode();
     hash = (37 * hash) + ID_PACIENTE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getIdPaciente());
+    hash = (53 * hash) + getIdPaciente().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -308,7 +332,7 @@ public  final class PermisoRequest extends
       super.clear();
       cedulaMedico_ = "";
 
-      idPaciente_ = 0L;
+      idPaciente_ = "";
 
       return this;
     }
@@ -379,8 +403,9 @@ public  final class PermisoRequest extends
         cedulaMedico_ = other.cedulaMedico_;
         onChanged();
       }
-      if (other.getIdPaciente() != 0L) {
-        setIdPaciente(other.getIdPaciente());
+      if (!other.getIdPaciente().isEmpty()) {
+        idPaciente_ = other.idPaciente_;
+        onChanged();
       }
       onChanged();
       return this;
@@ -477,28 +502,71 @@ public  final class PermisoRequest extends
       return this;
     }
 
-    private long idPaciente_ ;
+    private java.lang.Object idPaciente_ = "";
     /**
-     * <code>optional int64 id_paciente = 2;</code>
+     * <code>optional string id_paciente = 2;</code>
      */
-    public long getIdPaciente() {
-      return idPaciente_;
+    public java.lang.String getIdPaciente() {
+      java.lang.Object ref = idPaciente_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        idPaciente_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>optional int64 id_paciente = 2;</code>
+     * <code>optional string id_paciente = 2;</code>
      */
-    public Builder setIdPaciente(long value) {
-      
+    public com.google.protobuf.ByteString
+        getIdPacienteBytes() {
+      java.lang.Object ref = idPaciente_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        idPaciente_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string id_paciente = 2;</code>
+     */
+    public Builder setIdPaciente(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       idPaciente_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>optional int64 id_paciente = 2;</code>
+     * <code>optional string id_paciente = 2;</code>
      */
     public Builder clearIdPaciente() {
       
-      idPaciente_ = 0L;
+      idPaciente_ = getDefaultInstance().getIdPaciente();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string id_paciente = 2;</code>
+     */
+    public Builder setIdPacienteBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      idPaciente_ = value;
       onChanged();
       return this;
     }

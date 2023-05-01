@@ -10,7 +10,7 @@ service permisosService{
 
 message PermisoRequest {
   string cedula_medico = 1;
-  int64 id_paciente = 2;
+  string id_paciente = 2;
 }
 
 message PermisoResponse {

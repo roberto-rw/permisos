@@ -34,7 +34,7 @@ public final class Permisos {
   static {
     java.lang.String[] descriptorData = {
       "\n\016permisos.proto\"<\n\016PermisoRequest\022\025\n\rce" +
-      "dula_medico\030\001 \001(\t\022\023\n\013id_paciente\030\002 \001(\003\"\"" +
+      "dula_medico\030\001 \001(\t\022\023\n\013id_paciente\030\002 \001(\t\"\"" +
       "\n\017PermisoResponse\022\017\n\007permiso\030\001 \001(\0102D\n\017pe" +
       "rmisosService\0221\n\ngetPermiso\022\017.PermisoReq" +
       "uest\032\020.PermisoResponse\"\000B \n\034com.permisos" +
