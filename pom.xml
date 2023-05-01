@@ -43,29 +43,8 @@
 		</dependency>
 
 		<!-- Dependencias de gRPC -->
-
+	
 		<dependency>
-<<<<<<< HEAD
-			<groupId>com.google.protobuf</groupId>
-			<artifactId>protobuf-java</artifactId>
-			<version>3.22.3</version>
-		</dependency>
-		<dependency>
-			<groupId>io.grpc</groupId>
-			<artifactId>grpc-netty-shaded</artifactId>
-			<version>1.54.1</version>
-		</dependency>
-		<dependency>
-			<groupId>io.grpc</groupId>
-			<artifactId>grpc-protobuf</artifactId>
-			<version>1.54.1</version>
-		</dependency>
-		<dependency>
-			<groupId>io.grpc</groupId>
-			<artifactId>grpc-stub</artifactId>
-			<version>1.54.1</version>
-		</dependency>
-=======
                     <groupId>com.google.protobuf</groupId>
                     <artifactId>protobuf-java</artifactId>
                     <version>3.22.3</version>
@@ -90,8 +69,6 @@
                     <artifactId>javax.annotation-api</artifactId>
                     <version>1.2</version>
                 </dependency>
->>>>>>> aea2a6d44aef0167866bc626fdae8653074c5c02
-
 	</dependencies>
 
 	<build>
