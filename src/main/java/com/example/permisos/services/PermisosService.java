@@ -14,15 +14,12 @@ public class PermisosService {
     private PermisosRepository permisosRepository;
 
 
-//    public Permiso createPermiso(){
-//
-//    }
 
     public boolean getPermiso(String cedulaMedico, Long idPaciente){
+        System.out.println(permisosRepository);
         List<Permiso> permisos = permisosRepository.findByCedulaMedicoAndIdPaciente(cedulaMedico, idPaciente);
         if(permisos.isEmpty()) return false;
         return true;
     }
-
 
 }
