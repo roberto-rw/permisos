@@ -5,20 +5,12 @@ option java_package = "com.permisosservicegrpc.grpc";
 
 service permisosService{
     //public boolean getPermiso(String cedulaMedico, Long idPaciente)
-    rpc getPermiso(CedulaMedico, IdPaciente) returns (PermisoResponse) {}
+    rpc getPermiso(PermisoRequest) returns (PermisoResponse) {}
 }
 
-//message PermisoRequest {
-//  string cedula_medico = 1;
-//  int64 id_paciente = 2;
-//}
-
-message CedulaMedico{
+message PermisoRequest {
   string cedula_medico = 1;
-}
-
-message IdPaciente{
-  int64 id_paciente = 1;
+  int64 id_paciente = 2;
 }
 
 message PermisoResponse {
