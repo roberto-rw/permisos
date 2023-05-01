@@ -29,7 +29,6 @@ public class PermisosController {
     @PostMapping("permisos/save")
     public ResponseEntity<Permiso> guardarPermiso(@RequestBody Permiso permiso){
         Permiso permisoNuevo = permisoService.guardarPermiso(permiso);
-        System.out.println(permiso.getCedulaMedico());
         return new ResponseEntity<Permiso>(permisoNuevo, HttpStatusCode.valueOf(200)); 
     }
 }
