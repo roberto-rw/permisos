@@ -15,9 +15,7 @@ public class PermisosApplication {
 		SpringApplication.run(PermisosApplication.class, args);
 		ConfigurableApplicationContext appContext = SpringApplication.run(PermisosApplication.class, args);
                 PermisosService perm = appContext.getBean(PermisosService.class);
-                
                 Server server = ServerBuilder.forPort(9090).addService(perm).build();
-                
                 try {
                     server.start();
                     System.out.println("Se inicio el Server en el puerto 9090");
