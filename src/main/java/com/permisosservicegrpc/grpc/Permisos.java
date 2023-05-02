@@ -33,12 +33,13 @@ public final class Permisos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016permisos.proto\"<\n\016PermisoRequest\022\025\n\rce" +
-      "dula_medico\030\001 \001(\t\022\023\n\013id_paciente\030\002 \001(\t\"\"" +
-      "\n\017PermisoResponse\022\017\n\007permiso\030\001 \001(\0102D\n\017pe" +
-      "rmisosService\0221\n\ngetPermiso\022\017.PermisoReq" +
-      "uest\032\020.PermisoResponse\"\000B \n\034com.permisos" +
-      "servicegrpc.grpcP\001b\006proto3"
+      "\n\016permisos.proto\"T\n\016PermisoRequest\022\025\n\rce" +
+      "dula_medico\030\001 \001(\t\022\023\n\013id_paciente\030\002 \001(\t\022\026" +
+      "\n\016nombre_archivo\030\003 \001(\t\"\"\n\017PermisoRespons" +
+      "e\022\017\n\007permiso\030\001 \001(\0102D\n\017permisosService\0221\n" +
+      "\ngetPermiso\022\017.PermisoRequest\032\020.PermisoRe" +
+      "sponse\"\000B \n\034com.permisosservicegrpc.grpc" +
+      "P\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -57,7 +58,7 @@ public final class Permisos {
     internal_static_PermisoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PermisoRequest_descriptor,
-        new java.lang.String[] { "CedulaMedico", "IdPaciente", });
+        new java.lang.String[] { "CedulaMedico", "IdPaciente", "NombreArchivo", });
     internal_static_PermisoResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_PermisoResponse_fieldAccessorTable = new

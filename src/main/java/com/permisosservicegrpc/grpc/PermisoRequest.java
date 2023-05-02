@@ -17,6 +17,7 @@ public  final class PermisoRequest extends
   private PermisoRequest() {
     cedulaMedico_ = "";
     idPaciente_ = "";
+    nombreArchivo_ = "";
   }
 
   @java.lang.Override
@@ -54,6 +55,12 @@ public  final class PermisoRequest extends
             java.lang.String s = input.readStringRequireUtf8();
 
             idPaciente_ = s;
+            break;
+          }
+          case 26: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            nombreArchivo_ = s;
             break;
           }
         }
@@ -147,6 +154,40 @@ public  final class PermisoRequest extends
     }
   }
 
+  public static final int NOMBRE_ARCHIVO_FIELD_NUMBER = 3;
+  private volatile java.lang.Object nombreArchivo_;
+  /**
+   * <code>optional string nombre_archivo = 3;</code>
+   */
+  public java.lang.String getNombreArchivo() {
+    java.lang.Object ref = nombreArchivo_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      nombreArchivo_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>optional string nombre_archivo = 3;</code>
+   */
+  public com.google.protobuf.ByteString
+      getNombreArchivoBytes() {
+    java.lang.Object ref = nombreArchivo_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      nombreArchivo_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -165,6 +206,9 @@ public  final class PermisoRequest extends
     if (!getIdPacienteBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, idPaciente_);
     }
+    if (!getNombreArchivoBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, nombreArchivo_);
+    }
   }
 
   public int getSerializedSize() {
@@ -177,6 +221,9 @@ public  final class PermisoRequest extends
     }
     if (!getIdPacienteBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, idPaciente_);
+    }
+    if (!getNombreArchivoBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, nombreArchivo_);
     }
     memoizedSize = size;
     return size;
@@ -198,6 +245,8 @@ public  final class PermisoRequest extends
         .equals(other.getCedulaMedico());
     result = result && getIdPaciente()
         .equals(other.getIdPaciente());
+    result = result && getNombreArchivo()
+        .equals(other.getNombreArchivo());
     return result;
   }
 
@@ -212,6 +261,8 @@ public  final class PermisoRequest extends
     hash = (53 * hash) + getCedulaMedico().hashCode();
     hash = (37 * hash) + ID_PACIENTE_FIELD_NUMBER;
     hash = (53 * hash) + getIdPaciente().hashCode();
+    hash = (37 * hash) + NOMBRE_ARCHIVO_FIELD_NUMBER;
+    hash = (53 * hash) + getNombreArchivo().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -334,6 +385,8 @@ public  final class PermisoRequest extends
 
       idPaciente_ = "";
 
+      nombreArchivo_ = "";
+
       return this;
     }
 
@@ -358,6 +411,7 @@ public  final class PermisoRequest extends
       com.permisosservicegrpc.grpc.PermisoRequest result = new com.permisosservicegrpc.grpc.PermisoRequest(this);
       result.cedulaMedico_ = cedulaMedico_;
       result.idPaciente_ = idPaciente_;
+      result.nombreArchivo_ = nombreArchivo_;
       onBuilt();
       return result;
     }
@@ -405,6 +459,10 @@ public  final class PermisoRequest extends
       }
       if (!other.getIdPaciente().isEmpty()) {
         idPaciente_ = other.idPaciente_;
+        onChanged();
+      }
+      if (!other.getNombreArchivo().isEmpty()) {
+        nombreArchivo_ = other.nombreArchivo_;
         onChanged();
       }
       onChanged();
@@ -567,6 +625,75 @@ public  final class PermisoRequest extends
   checkByteStringIsUtf8(value);
       
       idPaciente_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object nombreArchivo_ = "";
+    /**
+     * <code>optional string nombre_archivo = 3;</code>
+     */
+    public java.lang.String getNombreArchivo() {
+      java.lang.Object ref = nombreArchivo_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nombreArchivo_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>optional string nombre_archivo = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNombreArchivoBytes() {
+      java.lang.Object ref = nombreArchivo_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nombreArchivo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>optional string nombre_archivo = 3;</code>
+     */
+    public Builder setNombreArchivo(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      nombreArchivo_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string nombre_archivo = 3;</code>
+     */
+    public Builder clearNombreArchivo() {
+      
+      nombreArchivo_ = getDefaultInstance().getNombreArchivo();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>optional string nombre_archivo = 3;</code>
+     */
+    public Builder setNombreArchivoBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      nombreArchivo_ = value;
       onChanged();
       return this;
     }

@@ -65,9 +65,6 @@ public class permisosServiceGrpc {
   public static abstract class permisosServiceImplBase implements io.grpc.BindableService {
 
     /**
-     * <pre>
-     *public boolean getPermiso(String cedulaMedico, Long idPaciente)
-     * </pre>
      */
     public void getPermiso(com.permisosservicegrpc.grpc.PermisoRequest request,
         io.grpc.stub.StreamObserver<com.permisosservicegrpc.grpc.PermisoResponse> responseObserver) {
@@ -106,9 +103,6 @@ public class permisosServiceGrpc {
     }
 
     /**
-     * <pre>
-     *public boolean getPermiso(String cedulaMedico, Long idPaciente)
-     * </pre>
      */
     public void getPermiso(com.permisosservicegrpc.grpc.PermisoRequest request,
         io.grpc.stub.StreamObserver<com.permisosservicegrpc.grpc.PermisoResponse> responseObserver) {
@@ -136,9 +130,6 @@ public class permisosServiceGrpc {
     }
 
     /**
-     * <pre>
-     *public boolean getPermiso(String cedulaMedico, Long idPaciente)
-     * </pre>
      */
     public com.permisosservicegrpc.grpc.PermisoResponse getPermiso(com.permisosservicegrpc.grpc.PermisoRequest request) {
       return blockingUnaryCall(
@@ -165,9 +156,6 @@ public class permisosServiceGrpc {
     }
 
     /**
-     * <pre>
-     *public boolean getPermiso(String cedulaMedico, Long idPaciente)
-     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<com.permisosservicegrpc.grpc.PermisoResponse> getPermiso(
         com.permisosservicegrpc.grpc.PermisoRequest request) {

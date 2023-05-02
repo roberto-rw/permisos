@@ -26,4 +26,14 @@ public interface PermisoRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getIdPacienteBytes();
+
+  /**
+   * <code>optional string nombre_archivo = 3;</code>
+   */
+  java.lang.String getNombreArchivo();
+  /**
+   * <code>optional string nombre_archivo = 3;</code>
+   */
+  com.google.protobuf.ByteString
+      getNombreArchivoBytes();
 }
