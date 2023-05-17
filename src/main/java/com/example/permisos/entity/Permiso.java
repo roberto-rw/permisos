@@ -1,6 +1,6 @@
 package com.example.permisos.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 
 @Data
@@ -14,6 +14,6 @@ public class Permiso {
 
     @Column(name = "cedula_medico")
     private String cedulaMedico;
-    @Column(name = "id_paciente")
-    private String idPaciente;
+    @Column(name = "nss_paciente")
+    private String nss;
 }

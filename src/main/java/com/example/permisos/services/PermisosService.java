@@ -23,7 +23,8 @@ public class PermisosService extends permisosServiceImplBase{
 
     @Override
     public void getPermiso(PermisoRequest request, StreamObserver<PermisoResponse> responseObserver) {
-        List<Permiso> permisos = permisosRepository.findByCedulaMedicoAndIdPaciente(request.getCedulaMedico(), request.getIdPaciente());
+        String nss = request.getIdPaciente()+"";
+        List<Permiso> permisos = permisosRepository.findByCedulaMedicoAndIdPaciente(request.getCedulaMedico(), nss );
         PermisoResponse.Builder response = PermisoResponse.newBuilder();
         if(permisos.isEmpty()){
             response.setPermiso(false);

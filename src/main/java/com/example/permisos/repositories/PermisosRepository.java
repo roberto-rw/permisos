@@ -13,6 +13,6 @@ import java.util.List;
 @Component
 public interface PermisosRepository extends JpaRepository<Permiso, Long> {
 
-    @Query("SELECT p FROM Permiso p WHERE p.cedulaMedico = :cedulaMedico AND p.idPaciente = :idPaciente")
-    List<Permiso> findByCedulaMedicoAndIdPaciente(@Param("cedulaMedico") String cedulaMedico, @Param("idPaciente") Long idPaciente);
+    @Query("SELECT p FROM Permiso p WHERE p.cedulaMedico = :cedulaMedico AND p.nss = :nss")
+    List<Permiso> findByCedulaMedicoAndIdPaciente(@Param("cedulaMedico") String cedulaMedico, @Param("nss") String nss);
 }
