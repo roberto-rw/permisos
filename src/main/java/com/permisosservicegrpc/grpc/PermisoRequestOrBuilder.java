@@ -18,7 +18,22 @@ public interface PermisoRequestOrBuilder extends
       getCedulaMedicoBytes();
 
   /**
-   * <code>optional int64 id_paciente = 2;</code>
+   * <code>optional string id_paciente = 2;</code>
    */
-  long getIdPaciente();
+  java.lang.String getIdPaciente();
+  /**
+   * <code>optional string id_paciente = 2;</code>
+   */
+  com.google.protobuf.ByteString
+      getIdPacienteBytes();
+
+  /**
+   * <code>optional string nombre_archivo = 3;</code>
+   */
+  java.lang.String getNombreArchivo();
+  /**
+   * <code>optional string nombre_archivo = 3;</code>
+   */
+  com.google.protobuf.ByteString
+      getNombreArchivoBytes();
 }

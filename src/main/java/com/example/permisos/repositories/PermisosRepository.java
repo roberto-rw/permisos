@@ -12,7 +12,6 @@ import java.util.List;
 @Repository
 @Component
 public interface PermisosRepository extends JpaRepository<Permiso, Long> {
-
     @Query("SELECT p FROM Permiso p WHERE p.cedulaMedico = :cedulaMedico AND p.nss = :nss")
     List<Permiso> findByCedulaMedicoAndIdPaciente(@Param("cedulaMedico") String cedulaMedico, @Param("nss") String nss);
 }

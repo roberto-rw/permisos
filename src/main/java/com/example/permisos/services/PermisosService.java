@@ -6,6 +6,7 @@ import com.permisosservicegrpc.grpc.PermisoRequest;
 import com.permisosservicegrpc.grpc.PermisoResponse;
 import com.permisosservicegrpc.grpc.permisosServiceGrpc.permisosServiceImplBase;
 import io.grpc.stub.StreamObserver;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,11 @@ public class PermisosService extends permisosServiceImplBase{
 
     @Autowired
     private PermisosRepository permisosRepository;
+
+    public PermisosService(PermisosRepository permisosRepository) {
+        this.permisosRepository = permisosRepository;
+    }
+
     
     public Permiso guardarPermiso(Permiso permiso){
         return permisosRepository.save(permiso);
